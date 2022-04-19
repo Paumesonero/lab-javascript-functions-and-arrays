@@ -1,24 +1,60 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  }
+  else if (num1 === num2) {
+    return 0;
+  }
+  return num2
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(arr) {
+  let longestWord = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+    if (longestWord.length < arr[i].length) {
+      longestWord = arr[i];
+    }
+  }
+  return longestWord;
+}
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arr) {
+  let totalSum = 0
+  for (let i = 0; i < arr.length; i++) {
+    totalSum += arr[i]
+  }
+  return totalSum
+}
 
-
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arr) {
+  let totalSum = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      totalSum += arr[i]
+    }
+    else if (typeof arr[i] === 'boolean') {
+      totalSum += arr[i];
+    }
+    else if (typeof arr[i] === 'string') {
+      totalSum += arr[i].length;
+    }
+  }
+  return totalSum;
+}
 
 
 
@@ -26,7 +62,7 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers() { }
 
 
 // Level 2: Array of strings
@@ -35,7 +71,7 @@ const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smar
 function averageWordLength() { }
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg() { }
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -52,14 +88,14 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray() { }
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist() { }
 
 
 
@@ -78,7 +114,7 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes() { }
 
 
 
@@ -106,7 +142,7 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct() { }
 
 
 
