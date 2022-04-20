@@ -62,16 +62,36 @@ function sum(arr) {
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() { }
+function averageNumbers(arr) {
+  let average = sumNumbers(arr) / arr.length;
+  return average
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arrWords) {
+  const averageLength = arrWords.reduce((acc, val) => acc + val.length / arrWords.length, 0)
+  return averageLength;
+}
 
 // Bonus - Iteration #4.1
-function avg() { }
+function avg(arr) {
+  let totalSum = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      totalSum += arr[i]
+    }
+    else if (typeof arr[i] === 'boolean') {
+      totalSum += arr[i];
+    }
+    else if (typeof arr[i] === 'string') {
+      totalSum += arr[i].length;
+    }
+  }
+  return totalSum / arr.length;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -88,14 +108,26 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() { }
+function uniquifyArray(arr) {
+  const uniqueArr = arr.filter((el, index) => {
+    return arr.indexOf(el) === index;
+  });
+  return uniqueArr;
+}
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() { }
+function doesWordExist(arr, word) {
+  if (arr.includes(word)) {
+    return true
+  }
+  else {
+    return false
+  }
+}
 
 
 
@@ -114,7 +146,16 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() { }
+function howManyTimes(arr, word) {
+  let totalRepetitions = 0;
+  let wordToCheck = word;
+  for (let i = 0; i < arr.length; i++) {
+    if (wordToCheck === arr[i]) {
+      totalRepetitions++;
+    }
+  }
+  return totalRepetitions;
+}
 
 
 
